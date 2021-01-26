@@ -1,0 +1,36 @@
+#include <stdio.h>
+//defining a structure
+struct employee
+{
+   char emp_name[100];
+   long int emp_no;
+   int emp_age;
+   long int emp_salary;
+};
+int main()
+{
+   int i;
+   //defining a structure variable which can store 20 employee details
+   struct employee e[20];
+   // reading the employee details
+   for(i=0;i<3;i++)
+   {
+    printf("Enter Employee %d Details:\n",(i+1));
+    printf("emp_name:");
+    scanf("%s",e[i].emp_name);
+    printf("emp_age:");
+    scanf("%d",&e[i].emp_age);
+    printf("emp_no:");
+    scanf("%ld",&e[i].emp_no);
+    printf("emp_salary:");
+    scanf("%ld",&e[i].emp_salary);
+   }
+   //printing employee details in a tabular format
+   printf("Name\tAge\tPhone Number\tSalary\n");
+   for(i=0;i<3;i++)
+   {
+     printf("%s\t%d\t%ld\t%ld\n",e[i].emp_name,e[i].emp_age,e[i].emp_no,e[i].emp_salary);
+   }
+    return 0;
+}
+
